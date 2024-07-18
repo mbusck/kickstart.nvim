@@ -910,3 +910,10 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+vim.keymap.set('n', ';', ':')
+vim.g.vimwiki_list = { { syntax = 'markdown', ext = '.md' }, { path = '/projects/', syntax = 'markdown', ext = '.md', conceallevel = 0 } }
+vim.g.vimwiki_ext2syntax = { ['.md'] = 'markdown', ['.markdown'] = 'markdown', ['.mdown'] = 'markdown' }
+vim.o.hlsearch = true
+vim.o.scrolloff = 999
+vim.o.cursorline = true
+vim.keymap.set('n', '<leader>cp', ':let @+=expand("%:p")<CR>')
